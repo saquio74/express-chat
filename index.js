@@ -23,4 +23,8 @@ io.on('connection',(socket)=>{
     socket.on('escribiendo', (data)=>{
         socket.broadcast.emit('escribiendo', data)
     });
+
+    socket.on('notificacion:io',(data)=>{
+        socket.broadcast.emit('notificacion', data)
+    });
 })
